@@ -1,19 +1,29 @@
-[project]
+[tool.poetry]
 name = "dictionary-nouns"
 version = "0.1.0"
-description = ""
-authors = [
-    {name = "Dante Dupont",email = "dmxdupont@gmail.com"}
-]
+description = "Analyze noun usage in dictionary definitions"
+authors = ["Dante Dupont <dmxdupont@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-]
-
-[tool.poetry]
 packages = [{include = "dictionary_nouns", from = "src"}]
 
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+spacy = "^3.8.7"
+fastapi = "^0.116.1"
+sqlalchemy = "^2.0.43"
+pandas = "^2.3.2"
+nltk = "^3.9.1"
+beautifulsoup4 = "^4.13.5"
+requests = "^2.32.5"
+redis = "^6.4.0"
+psycopg2-binary = "^2.9.10"
+python-dotenv = "^1.1.1"
+uvicorn = "^0.35.0"
+pydantic = "^2.11.7"
+alembic = "^1.16.5"
+
+[tool.poetry.group.dev.dependencies]
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
